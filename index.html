@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <title>IP tracking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+    <div
+        class="relative w-full h-[40vh] lg:bg-bgPatternDesktop bg-bgPatternMobile bg-center bg-cover bg-no-repeat flex flex-col justify-center items-center">
+        <div class="absolute top-16 lg:top-32 flex flex-col space-y-10 w-[85%] lg:w-[65%]">
+            <div class="h-16 flex flex-row rounded-lg lg:w-[60%] lg:mx-auto">
+                <input type="text" name="" id="ipInput"
+                    class="w-[80%] lg:w-[85%] px-5 rounded-s-xl placeholder:text-DarkGray outline-none text-[18px]"
+                    placeholder="Search any IP address or domain">
+                <div class="w-[20%] lg:w-[15%] bg-black flex justify-center items-center rounded-e-xl hover:opacity-75 duration-100 cursor-pointer" id="searchBtn">
+                    <img src="./images/icon-arrow.svg" alt="">
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col justify-center items-center lg:flex-row lg:justify-between lg:px-10 bg-white rounded-xl p-8 space-y-3 lg:space-y-0 z-10">
+                <div class="flex flex-col justify-center items-center space-y-1 lg:px-5 lg:items-start">
+                    <p class="text-DarkGray font-bold text-[11px] lg:text-[13px] tracking-widest">IP ADDRESS</p>
+                    <h2 class="text-VeryDarkGray font-bold lg:text-[23px] tracking-wide" id="ipAddress">8.8.8.8</h2>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center space-y-1 lg:px-5 lg:items-start lg:border-s-2 lg:border-gray-300 px-5">
+                    <p class="text-DarkGray font-bold text-[11px] lg:text-[13px] tracking-widest">LOCATION</p>
+                    <h2 class="text-VeryDarkGray font-bold lg:text-[23px] tracking-wide" id="location">Mountain View, California</h2>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center space-y-1 lg:px-5 lg:items-start lg:border-s-2 lg:border-gray-300 px-5">
+                    <p class="text-DarkGray font-bold text-[11px] lg:text-[13px] tracking-widest">TIMEZONE</p>
+                    <h2 class="text-VeryDarkGray font-bold lg:text-[23px] tracking-wide" id="UTC">UTC -07:00</h2>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center space-y-1 lg:px-5 lg:items-start lg:border-s-2 lg:border-gray-300 px-5">
+                    <p class="text-DarkGray font-bold text-[11px] lg:text-[13px] tracking-widest">ISP</p>
+                    <h2 class="text-VeryDarkGray font-bold lg:text-[23px] tracking-wide" id="ISP">Google LLC</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map" class="h-[60vh] z-0">
+     
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
